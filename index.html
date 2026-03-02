@@ -10,45 +10,45 @@
   <div class="wrap">
     <div class="top">
       <div class="logo"><span class="dot"></span><span>临时文件站</span></div>
-      <div class="sub">小清新主题 · 分类入口优先</div>
+      <div class="sub">简洁、好找、可直接下载</div>
     </div>
 
     <div class="hero">
-      <h1>首页只看重点，点进去看详情</h1>
-      <p>按分类进入查看文件列表；文件通过 <b>git push</b> 更新，适合临时共享与下载。</p>
+      <h1>你要的文件，都在这里</h1>
+      <p>先选分类，再浏览文件。每个文件都支持一键打开和复制链接，分享给同事会更顺手。</p>
       <div class="chips">
-        <span class="chip">轻量</span>
-        <span class="chip">可下载</span>
-        <span class="chip">可复制链接</span>
+        <span class="chip">小清新风格</span>
         <span class="chip">移动端友好</span>
+        <span class="chip">支持快速搜索</span>
+        <span class="chip">Git Push 即更新</span>
       </div>
       <div class="nav">
-        <a href="pages/images.html">🖼 图片</a>
-        <a href="pages/docs.html">📄 文档</a>
-        <a href="pages/data.html">📊 数据</a>
+        <a href="pages/images.html">🖼 看图片</a>
+        <a href="pages/docs.html">📄 看文档</a>
+        <a href="pages/data.html">📊 看数据</a>
       </div>
     </div>
 
     <div class="stats">
-      <div class="stat"><div class="n" data-total>0</div><div class="k">文件总数</div></div>
-      <div class="stat"><div class="n">3</div><div class="k">分类</div></div>
+      <div class="stat"><div class="n" data-total>0</div><div class="k">当前文件总数</div></div>
+      <div class="stat"><div class="n">3</div><div class="k">可浏览分类</div></div>
       <div class="stat"><div class="n">GitHub Pages</div><div class="k">托管方式</div></div>
-      <div class="stat"><div class="n">Public</div><div class="k">可访问性</div></div>
+      <div class="stat"><div class="n">公开访问</div><div class="k">无需登录</div></div>
     </div>
 
-    <div class="section">进入分类</div>
+    <div class="section">从这里进入</div>
     <div class="cats">
-      <a class="cat" href="pages/images.html"><div class="name">🖼 图片</div><div class="meta" data-count="images">-</div></a>
-      <a class="cat" href="pages/docs.html"><div class="name">📄 文档</div><div class="meta" data-count="docs">-</div></a>
-      <a class="cat" href="pages/data.html"><div class="name">📊 数据</div><div class="meta" data-count="data">-</div></a>
+      <a class="cat" href="pages/images.html"><div class="name">🖼 图片区</div><div class="meta" data-count="images">-</div></a>
+      <a class="cat" href="pages/docs.html"><div class="name">📄 文档区</div><div class="meta" data-count="docs">-</div></a>
+      <a class="cat" href="pages/data.html"><div class="name">📊 数据区</div><div class="meta" data-count="data">-</div></a>
     </div>
 
     <div class="latest">
-      <div><b>最新上传</b> <span class="muted">（仅展示3条）</span></div>
+      <div><b>最近更新</b> <span class="muted">（展示最近 3 个）</span></div>
       <ul id="latest-list"></ul>
     </div>
 
-    <div class="foot">提示：后续只需把文件放到 <code>files/</code> 并 push。链接可在分类页一键复制。</div>
+    <div class="foot">提示：后续只要把文件放进 <code>files/</code> 后 <code>git push</code>，这里会自动更新展示。</div>
   </div>
 
   <button id="back-top" class="float-top">↑ 顶部</button>

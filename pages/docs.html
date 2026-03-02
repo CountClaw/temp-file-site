@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>文档列表</title>
+  <title>文档区</title>
   <link rel="stylesheet" href="../assets/style.css" />
 </head>
 <body data-category="docs">
   <div class="wrap">
     <div class="top">
-      <div class="title" id="page-title">📄 文档列表</div>
-      <a class="back" href="../index.html">← 返回首页</a>
+      <div class="title" id="page-title">📄 文档区</div>
+      <a class="back" href="../index.html">← 回到首页</a>
     </div>
 
     <div class="nav">
-      <a href="images.html">🖼 图片</a>
-      <a class="active" href="docs.html">📄 文档</a>
-      <a href="data.html">📊 数据</a>
+      <a href="images.html">🖼 图片区</a>
+      <a class="active" href="docs.html">📄 文档区</a>
+      <a href="data.html">📊 数据区</a>
     </div>
 
     <div class="toolbar">
-      <input id="search-input" class="input" placeholder="搜索文件名 / 类型" />
+      <input id="search-input" class="input" placeholder="搜文件名 / 文件类型" />
       <select id="sort-select" class="select">
-        <option value="latest">按时间（最新）</option>
+        <option value="latest">按更新时间（最新）</option>
         <option value="name">按名称</option>
         <option value="size">按大小</option>
       </select>
-      <button id="clear-btn" class="btn ghost">清空搜索</button>
+      <button id="clear-btn" class="btn ghost">清空筛选</button>
       <button id="copy-visible-btn" class="btn ghost">复制当前列表链接</button>
       <span id="count-text" class="count"></span>
     </div>
@@ -35,7 +35,7 @@
       <thead><tr><th>文件名</th><th>类型</th><th>大小</th><th>更新时间</th><th>操作</th></tr></thead>
       <tbody id="file-table-body"></tbody>
     </table>
-    <div id="empty-state" class="empty">没有匹配结果，换个关键词试试。</div>
+    <div id="empty-state" class="empty">没找到匹配文件，换个关键词再试试。</div>
   </div>
 
   <button id="back-top" class="float-top">↑ 顶部</button>
