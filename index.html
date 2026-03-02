@@ -7,40 +7,28 @@
   <style>
     :root{--bg:#0f1115;--panel:#171a21;--line:#2a2f3a;--text:#f2f4f8;--muted:#9aa3b2;--red:#d33a31}
     *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#111318,#0e1014);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif}
-    .wrap{max-width:1060px;margin:0 auto;padding:28px 18px}
-    .top{display:flex;justify-content:space-between;align-items:center;gap:12px}
-    .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:24px}
-    .dot{width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#ff7b73,var(--red));box-shadow:0 0 0 4px rgba(211,58,49,.25)}
-    .sub{color:var(--muted);font-size:13px}
-    .hero{margin-top:14px;background:linear-gradient(140deg,#1a1d25,#141821);border:1px solid var(--line);border-radius:16px;padding:16px}
+    .wrap{max-width:1060px;margin:0 auto;padding:28px 18px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:24px}.dot{width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#ff7b73,var(--red));box-shadow:0 0 0 4px rgba(211,58,49,.25)}
+    .sub{color:var(--muted);font-size:13px}.hero{margin-top:14px;background:linear-gradient(140deg,#1a1d25,#141821);border:1px solid var(--line);border-radius:16px;padding:16px}
     .hero h1{margin:0;font-size:26px}.hero p{margin:8px 0 0;color:var(--muted)}
-    .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:14px}
-    .stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px}
+    .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:14px}.stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px}
     .n{font-size:20px;font-weight:800}.k{font-size:12px;color:var(--muted);margin-top:4px}
-    .section{margin-top:20px;font-size:18px;font-weight:700}
-    .cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:10px}
-    .cat{display:block;background:linear-gradient(160deg,#1a1d26,#141821);border:1px solid var(--line);border-radius:14px;padding:14px;transition:.2s}
-    .cat:hover{transform:translateY(-2px);border-color:#3b4352}
-    .cat .name{font-size:16px;font-weight:700}
-    .cat .meta{margin-top:6px;color:var(--muted);font-size:13px}
-    .foot{margin-top:16px;color:var(--muted);font-size:12px}
+    .section{margin-top:20px;font-size:18px;font-weight:700}.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:10px}
+    .cat{display:block;background:linear-gradient(160deg,#1a1d26,#141821);border:1px solid var(--line);border-radius:14px;padding:14px;transition:.2s}.cat:hover{transform:translateY(-2px);border-color:#3b4352}
+    .cat .name{font-size:16px;font-weight:700}.cat .meta{margin-top:6px;color:var(--muted);font-size:13px}
+    .latest{margin-top:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px}.latest ul{margin:8px 0 0 18px;padding:0}.latest li{margin:6px 0}
+    .muted{color:var(--muted)} .foot{margin-top:16px;color:var(--muted);font-size:12px}
+    code{background:#23252c;border:1px solid #343741;border-radius:6px;padding:2px 6px}
     @media(max-width:800px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="top">
-      <div class="logo"><span class="dot"></span><span>临时文件站</span></div>
-      <div class="sub">首页仅展示重要信息</div>
-    </div>
-
-    <div class="hero">
-      <h1>分类入口</h1>
-      <p>按分类进入查看文件列表；文件通过 <b>git push</b> 更新，适合临时共享与下载。</p>
-    </div>
+    <div class="top"><div class="logo"><span class="dot"></span><span>临时文件站</span></div><div class="sub">首页仅展示重要信息</div></div>
+    <div class="hero"><h1>分类入口</h1><p>按分类进入查看文件列表；文件通过 <b>git push</b> 更新，适合临时共享与下载。</p></div>
 
     <div class="stats">
-      <div class="stat"><div class="n">7</div><div class="k">文件总数</div></div>
+      <div class="stat"><div class="n" data-total>7</div><div class="k">文件总数</div></div>
       <div class="stat"><div class="n">3</div><div class="k">分类</div></div>
       <div class="stat"><div class="n">GitHub Pages</div><div class="k">托管方式</div></div>
       <div class="stat"><div class="n">Public</div><div class="k">可访问性</div></div>
@@ -48,12 +36,18 @@
 
     <div class="section">进入分类</div>
     <div class="cats">
-      <a class="cat" href="pages/images.html"><div class="name">🖼 图片</div><div class="meta">3 个文件 · 可预览</div></a>
-      <a class="cat" href="pages/docs.html"><div class="name">📄 文档</div><div class="meta">1 个文件 · 文本说明</div></a>
-      <a class="cat" href="pages/data.html"><div class="name">📊 数据</div><div class="meta">3 个文件 · CSV/XLSX/TSV</div></a>
+      <a class="cat" href="pages/images.html"><div class="name">🖼 图片</div><div class="meta" data-count="images">-</div></a>
+      <a class="cat" href="pages/docs.html"><div class="name">📄 文档</div><div class="meta" data-count="docs">-</div></a>
+      <a class="cat" href="pages/data.html"><div class="name">📊 数据</div><div class="meta" data-count="data">-</div></a>
     </div>
 
-    <div class="foot">提示：后续只需把文件放到 <code>files/</code> 并 push，页面链接可长期复用。</div>
+    <div class="latest">
+      <div><b>最新上传</b> <span class="muted">（仅展示3条）</span></div>
+      <ul id="latest-list"></ul>
+    </div>
+
+    <div class="foot">提示：后续只需把文件放到 <code>files/</code> 并 push。链接可在分类页“一键复制”。</div>
   </div>
+  <script src="assets/app.js"></script>
 </body>
 </html>

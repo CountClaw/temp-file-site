@@ -1,0 +1,67 @@
+{
+  "generatedAt": "2026-03-02T16:05:36.776695Z",
+  "count": 7,
+  "summary": {
+    "docs": 1,
+    "data": 3,
+    "images": 3
+  },
+  "items": [
+    {
+      "name": "readme.txt",
+      "path": "files/docs/readme.txt",
+      "category": "docs",
+      "mime": "text/plain",
+      "size": 94,
+      "updatedAt": "2026-03-02T15:54:52.361521Z"
+    },
+    {
+      "name": "linkpool.tsv",
+      "path": "files/data/linkpool.tsv",
+      "category": "data",
+      "mime": "text/tab-separated-values",
+      "size": 12976,
+      "updatedAt": "2026-03-02T15:54:52.360521Z"
+    },
+    {
+      "name": "keywords.xlsx",
+      "path": "files/data/keywords.xlsx",
+      "category": "data",
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": 3379,
+      "updatedAt": "2026-03-02T15:54:52.358521Z"
+    },
+    {
+      "name": "keywords.csv",
+      "path": "files/data/keywords.csv",
+      "category": "data",
+      "mime": "text/csv",
+      "size": 1943,
+      "updatedAt": "2026-03-02T15:54:52.357521Z"
+    },
+    {
+      "name": "cat_3.jpg",
+      "path": "files/images/cat_3.jpg",
+      "category": "images",
+      "mime": "image/jpeg",
+      "size": 290214,
+      "updatedAt": "2026-03-02T15:54:52.355521Z"
+    },
+    {
+      "name": "cat_2.jpg",
+      "path": "files/images/cat_2.jpg",
+      "category": "images",
+      "mime": "image/jpeg",
+      "size": 290214,
+      "updatedAt": "2026-03-02T15:54:52.353521Z"
+    },
+    {
+      "name": "cat_1.jpg",
+      "path": "files/images/cat_1.jpg",
+      "category": "images",
+      "mime": "image/jpeg",
+      "size": 290214,
+      "updatedAt": "2026-03-02T15:54:52.351521Z"
+    }
+  ]
+}
