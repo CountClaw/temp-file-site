@@ -43,6 +43,11 @@
       const clearBtn = document.querySelector('#clear-btn');
       const copyAllBtn = document.querySelector('#copy-visible-btn');
       const empty = document.querySelector('#empty-state');
+      const toggleBtn = document.querySelector('#toggle-view-btn');
+      const imageGrid = document.querySelector('#image-grid');
+      const tableWrap = table.closest('table');
+      const isImagePage = cat === 'images' && !!imageGrid;
+      let gridMode = false;
 
       const getView = () => {
         let items = [...allItems];
@@ -55,10 +60,7 @@
         return items;
       };
 
-      const render = () => {
-        const items = getView();
-        countEl && (countEl.textContent = `显示 ${items.length} / ${allItems.length}`);
-        empty && (empty.style.display = items.length ? 'none' : 'block');
+      const renderTable = (items) => {
         table.innerHTML = items.map(it=>`<tr>
           <td>${it.name}</td>
           <td class="muted">${it.mime}</td>
@@ -72,6 +74,43 @@
         table.querySelectorAll('button[data-copy]').forEach(btn=>btn.addEventListener('click',()=>copy(btn.getAttribute('data-copy'),btn)));
       };
 
+      const renderGrid = (items) => {
+        if(!imageGrid) return;
+        imageGrid.innerHTML = items.map(it=>`<div class="icard">
+          <div class="ithumb" data-preview="${it.href}" data-name="${it.name}"><img src="${it.href}" alt="${it.name}" loading="lazy"/></div>
+          <div class="imeta"><div class="iname" title="${it.name}">${it.name}</div><div class="isub">${fmtSize(it.size)} · ${fmtTime(it.updatedAt)}</div></div>
+        </div>`).join('');
+
+        const lb = document.querySelector('#lightbox');
+        const lbImg = document.querySelector('#lb-img');
+        const lbName = document.querySelector('#lb-name');
+        const lbClose = document.querySelector('#lb-close');
+        imageGrid.querySelectorAll('[data-preview]').forEach(el=>el.addEventListener('click',()=>{
+          if(!lb||!lbImg) return;
+          lbImg.src = el.getAttribute('data-preview');
+          if(lbName) lbName.textContent = el.getAttribute('data-name') || '';
+          lb.style.display = 'flex';
+        }));
+        lbClose && lbClose.addEventListener('click',()=>{ if(lb) lb.style.display='none'; });
+        lb && lb.addEventListener('click', (e)=>{ if(e.target===lb) lb.style.display='none'; });
+      };
+
+      const render = () => {
+        const items = getView();
+        countEl && (countEl.textContent = `显示 ${items.length} / ${allItems.length}`);
+        empty && (empty.style.display = items.length ? 'none' : 'block');
+
+        if (isImagePage && gridMode) {
+          tableWrap && (tableWrap.style.display = 'none');
+          imageGrid.style.display = 'grid';
+          renderGrid(items);
+        } else {
+          tableWrap && (tableWrap.style.display = 'table');
+          if (imageGrid) imageGrid.style.display = 'none';
+          renderTable(items);
+        }
+      };
+
       qInput && qInput.addEventListener('input', render);
       sortSel && sortSel.addEventListener('change', render);
       clearBtn && clearBtn.addEventListener('click', ()=>{ if(qInput) qInput.value=''; render(); });
@@ -80,6 +119,16 @@
         if(!urls){alert('当前没有可复制的文件'); return;}
         copy(urls, copyAllBtn);
       });
+
+      if (toggleBtn && isImagePage) {
+        toggleBtn.addEventListener('click', ()=>{
+          gridMode = !gridMode;
+          toggleBtn.textContent = gridMode ? '切换为表格视图' : '切换为缩略图视图';
+          render();
+        });
+      } else if (toggleBtn) {
+        toggleBtn.style.display = 'none';
+      }
 
       render();
     }
