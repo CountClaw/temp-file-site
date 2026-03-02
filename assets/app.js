@@ -47,7 +47,7 @@
       const imageGrid = document.querySelector('#image-grid');
       const tableWrap = table.closest('table');
       const isImagePage = cat === 'images' && !!imageGrid;
-      let gridMode = false;
+      let gridMode = isImagePage;
 
       const getView = () => {
         let items = [...allItems];
@@ -121,6 +121,7 @@
       });
 
       if (toggleBtn && isImagePage) {
+        toggleBtn.textContent = gridMode ? '切换为表格视图' : '切换为缩略图视图';
         toggleBtn.addEventListener('click', ()=>{
           gridMode = !gridMode;
           toggleBtn.textContent = gridMode ? '切换为表格视图' : '切换为缩略图视图';
