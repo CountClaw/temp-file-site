@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>临时文件站 · File Gallery</title>
+<style>
+:root{--bg:#0b1020;--card:#121a33;--text:#e9eefc;--muted:#9fb0d9;--acc:#77a6ff}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:linear-gradient(135deg,#0b1020,#0f1a3f);color:var(--text)}
+.container{max-width:1100px;margin:0 auto;padding:28px}
+.h1{font-size:32px;font-weight:800}.sub{color:var(--muted);margin-top:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:18px}
+.card{background:rgba(18,26,51,.92);border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,.25)}
+.thumb{aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;background:#0c1430}
+.thumb img{max-width:100%;max-height:100%;display:block}
+.meta{padding:12px}.name{font-weight:700;word-break:break-all}.tags{font-size:12px;color:var(--muted);margin-top:6px}
+a.btn{display:inline-block;margin-top:10px;background:var(--acc);color:#07112e;padding:7px 12px;border-radius:10px;text-decoration:none;font-weight:700}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.pill{padding:6px 10px;border:1px solid rgba(255,255,255,.18);border-radius:999px;color:var(--muted);font-size:12px}
+.table{width:100%;border-collapse:collapse;margin-top:14px;background:rgba(18,26,51,.92);border-radius:12px;overflow:hidden}
+.table th,.table td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left}.table th{color:#bcd0ff}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="h1">临时文件网站</div>
+  <div class="sub">通过 <b>git push</b> 维护 · 支持图片 / 文档 / 数据文件浏览与下载</div>
+  <div class="row">
+    <div class="pill">GitHub Pages</div><div class="pill">Static Hosting</div><div class="pill">Temporary Storage</div>
+  </div>
+
+  <h2>🐱 图片预览</h2>
+  <div class="grid">
+    <div class="card"><div class="thumb"><img src="files/images/cat_1.jpg" alt="cat1"/></div><div class="meta"><div class="name">cat_1.jpg</div><div class="tags">image/jpeg</div><a class="btn" href="files/images/cat_1.jpg" target="_blank">查看/下载</a></div></div>
+    <div class="card"><div class="thumb"><img src="files/images/cat_2.jpg" alt="cat2"/></div><div class="meta"><div class="name">cat_2.jpg</div><div class="tags">image/jpeg</div><a class="btn" href="files/images/cat_2.jpg" target="_blank">查看/下载</a></div></div>
+    <div class="card"><div class="thumb"><img src="files/images/cat_3.jpg" alt="cat3"/></div><div class="meta"><div class="name">cat_3.jpg</div><div class="tags">image/jpeg</div><a class="btn" href="files/images/cat_3.jpg" target="_blank">查看/下载</a></div></div>
+  </div>
+
+  <h2>📄 其他文件</h2>
+  <table class="table">
+    <thead><tr><th>文件名</th><th>类型</th><th>操作</th></tr></thead>
+    <tbody>
+      <tr><td>readme.txt</td><td>text/plain</td><td><a class="btn" href="files/docs/readme.txt" target="_blank">打开</a></td></tr>
+      <tr><td>keywords.csv</td><td>text/csv</td><td><a class="btn" href="files/data/keywords.csv" target="_blank">下载</a></td></tr>
+      <tr><td>keywords.xlsx</td><td>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</td><td><a class="btn" href="files/data/keywords.xlsx" target="_blank">下载</a></td></tr>
+      <tr><td>linkpool.tsv</td><td>text/tab-separated-values</td><td><a class="btn" href="files/data/linkpool.tsv" target="_blank">下载</a></td></tr>
+    </tbody>
+  </table>
+
+  <p class="sub" style="margin-top:18px">提示：后续只需把文件放到 <code>files/</code> 并 <code>git push</code>，网站会自动更新。</p>
+</div>
+</body>
+</html>
