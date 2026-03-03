@@ -1,43 +1,27 @@
 {
-  "generatedAt": "2026-03-02T17:46:54.956033Z",
-  "count": 7,
+  "generatedAt": "2026-03-03T19:45:38.584349Z",
+  "count": 9,
   "summary": {
-    "docs": 1,
-    "data": 3,
-    "images": 3
+    "docs": 3,
+    "images": 3,
+    "data": 3
   },
   "items": [
     {
-      "name": "readme.txt",
-      "path": "files/docs/readme.txt",
+      "name": "gold_price_drop_report.md",
+      "path": "files/docs/gold_price_drop_report.md",
       "category": "docs",
-      "mime": "text/plain",
-      "size": 94,
-      "updatedAt": "2026-03-02T15:54:52.361521Z"
+      "mime": "text/markdown",
+      "size": 2248,
+      "updatedAt": "2026-03-03T19:41:11.876990Z"
     },
     {
-      "name": "linkpool.tsv",
-      "path": "files/data/linkpool.tsv",
-      "category": "data",
-      "mime": "text/tab-separated-values",
-      "size": 12976,
-      "updatedAt": "2026-03-02T15:54:52.360521Z"
-    },
-    {
-      "name": "keywords.xlsx",
-      "path": "files/data/keywords.xlsx",
-      "category": "data",
-      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-      "size": 3379,
-      "updatedAt": "2026-03-02T15:54:52.358521Z"
-    },
-    {
-      "name": "keywords.csv",
-      "path": "files/data/keywords.csv",
-      "category": "data",
-      "mime": "text/csv",
-      "size": 1943,
-      "updatedAt": "2026-03-02T15:54:52.357521Z"
+      "name": "gold_price_drop_analysis.md",
+      "path": "files/docs/gold_price_drop_analysis.md",
+      "category": "docs",
+      "mime": "text/markdown",
+      "size": 2752,
+      "updatedAt": "2026-03-03T18:20:32.979472Z"
     },
     {
       "name": "cat_3.jpg",
@@ -45,15 +29,7 @@
       "category": "images",
       "mime": "image/jpeg",
       "size": 290214,
-      "updatedAt": "2026-03-02T15:54:52.355521Z"
-    },
-    {
-      "name": "cat_2.jpg",
-      "path": "files/images/cat_2.jpg",
-      "category": "images",
-      "mime": "image/jpeg",
-      "size": 290214,
-      "updatedAt": "2026-03-02T15:54:52.353521Z"
+      "updatedAt": "2026-03-03T18:20:32.977472Z"
     },
     {
       "name": "cat_1.jpg",
@@ -61,7 +37,47 @@
       "category": "images",
       "mime": "image/jpeg",
       "size": 290214,
-      "updatedAt": "2026-03-02T15:54:52.351521Z"
+      "updatedAt": "2026-03-03T18:20:32.976472Z"
+    },
+    {
+      "name": "cat_2.jpg",
+      "path": "files/images/cat_2.jpg",
+      "category": "images",
+      "mime": "image/jpeg",
+      "size": 290214,
+      "updatedAt": "2026-03-03T18:20:32.976472Z"
+    },
+    {
+      "name": "linkpool.tsv",
+      "path": "files/data/linkpool.tsv",
+      "category": "data",
+      "mime": "text/tab-separated-values",
+      "size": 12976,
+      "updatedAt": "2026-03-03T18:20:32.975472Z"
+    },
+    {
+      "name": "keywords.csv",
+      "path": "files/data/keywords.csv",
+      "category": "data",
+      "mime": "text/csv",
+      "size": 1943,
+      "updatedAt": "2026-03-03T18:20:32.975472Z"
+    },
+    {
+      "name": "keywords.xlsx",
+      "path": "files/data/keywords.xlsx",
+      "category": "data",
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": 3379,
+      "updatedAt": "2026-03-03T18:20:32.975472Z"
+    },
+    {
+      "name": "readme.txt",
+      "path": "files/docs/readme.txt",
+      "category": "docs",
+      "mime": "text/plain",
+      "size": 94,
+      "updatedAt": "2026-03-03T18:20:32.975472Z"
     }
   ]
 }
