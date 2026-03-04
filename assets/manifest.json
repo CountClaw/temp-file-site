@@ -1,12 +1,20 @@
 {
-  "generatedAt": "2026-03-03T19:45:38.584349Z",
-  "count": 9,
+  "generatedAt": "2026-03-04T03:08:14.044464Z",
+  "count": 10,
   "summary": {
-    "docs": 3,
+    "docs": 4,
     "images": 3,
     "data": 3
   },
   "items": [
+    {
+      "name": "gold_price_drop_report_latest.md",
+      "path": "files/docs/gold_price_drop_report_latest.md",
+      "category": "docs",
+      "mime": "text/markdown",
+      "size": 2665,
+      "updatedAt": "2026-03-04T03:08:00.970098Z"
+    },
     {
       "name": "gold_price_drop_report.md",
       "path": "files/docs/gold_price_drop_report.md",
